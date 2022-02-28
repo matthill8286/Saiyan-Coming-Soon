@@ -346,6 +346,9 @@ $(document).ready(function ($) {
 /* 6. Map, Structure & Design .......... */
 /* ------------------------------------- */
 
+window.google.maps.event.addDomListener(window, "load", initMap)
+window.google.maps.event.addDomListener(window, "resize", initMap)
+
 function initMap() {
   // Basic options for a simple Google Map
   // The latitude and longitude to center the map (always required)
