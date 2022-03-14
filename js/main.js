@@ -1,10 +1,9 @@
 /*
  * SAIYAN MOTORSPORT V2 - Innovative Coming Soon Template
- * Build Date: April 2015
- * Update Date: May 2015
- * Author: Madeon08
- * Copyright (C) 2015 Madeon08
- * This is a premium product available exclusively on http://themeforest.net
+ * Build Date: February 2022
+ * Update Date: March 2022
+ * Author: Matthew Hill
+ * Copyright (C) 2022 matthill8286
  */
 
 /*  TABLE OF CONTENTS
@@ -24,51 +23,42 @@
 // When all the files were been loaded
 $(window).load(function () {
   // FadeIn for the left and middle part
-  setTimeout(function () {
+
     $(".left-part")
       .css("left", "0")
-      .addClass("fadeInLeft")
-      .removeClass("fadeOutLeft")
     $(".middle-part")
       .css("left", "50vw")
-      .addClass("fadeInRight")
-      .removeClass("fadeOutRight")
     $("#firefly-wrap").addClass("").removeClass("opacity-0")
-  }, 2400)
 
-  // FadeOut for the loading
-  setTimeout(function () {
-    $(".loading").addClass("fadeOut")
-  }, 3600)
 
   // FadeIn for the figures
-  setTimeout(function () {
+ 
     $(".digit").each(function (i) {
       ;(function (self) {
         setTimeout(function () {
           $(self).addClass("fadeInDown").removeClass("opacity-0")
-        }, i * 150 + 150)
+        }, i * 50 + 50)
       })(this)
     })
-  }, 3200)
+ 
 
   // FadeIn for the text "Days"
   setTimeout(function () {
     $(".text-day").addClass("fadeInRight").removeClass("opacity-0")
     $("#chevron-mobile").addClass("bounce").removeClass("opacity-0")
-  }, 4050)
+  }, 2050)
 
   // FadeIn for the text
   setTimeout(function () {
     $(".countdown-block h2").addClass("fadeInUp").removeClass("opacity-0")
-  }, 4200)
+  }, 2200)
 
   // FadeIn Alert button & Social Icons / Display none loading
   setTimeout(function () {
     $("#alert-button-1").addClass("fadeInUp").removeClass("opacity-0")
     $(".social-icons").addClass("fadeInDown").removeClass("opacity-0")
     $(".loading").addClass("display-none")
-  }, 4700)
+  }, 2700)
 
   // Deleting fadeInUp to prevent when the user click on it for having the good effect
   setTimeout(function () {
@@ -346,6 +336,7 @@ $(document).ready(function ($) {
 /* 6. Map, Structure & Design .......... */
 /* ------------------------------------- */
 
+// When the window has finished loading create our google map below
 window.google.maps.event.addDomListener(window, "load", initMap)
 window.google.maps.event.addDomListener(window, "resize", initMap)
 
