@@ -16,9 +16,7 @@ $(document).ready(function () {
     messageContainer.removeClass("error")
 
     emailjs
-      .send("service_rof6zzk", "template_8ufrdta", {
-        name: name.val(),
-        message: message.val(),
+      .send("service_rof6zzk", "notification_form", {
         email: email.val()
       })
       .then(
